@@ -1,0 +1,20 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+#output {
+    display: block;
+    width: 96%;
+    height: calc(((100% / 7) * 1.5) - 80px);
+    font-size: xx-large;
+    text-align: right;
+    padding-top: 80px;
+}
+
+button {
+    width: 24%;
+    height: calc(100% / 7);
+    font-size: x-large;
+}

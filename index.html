@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <label id="output"></label>
+    <br>
+    <button onclick="window.clear()">Clear</button>
+    <button onclick="window.back()">Back</button>
+    <button onclick="window.divide()">/</button>
+    <button onclick="window.multiply()">*</button>
+    <button onclick="window.seven()">7</button>
+    <button onclick="window.eight()">8</button>
+    <button onclick="window.nine()">9</button>
+    <button onclick="window.subtract()">-</button>
+    <button onclick="window.four()">4</button>
+    <button onclick="window.five()">5</button>
+    <button onclick="window.six()">6</button>
+    <button onclick="window.add()">+</button>
+    <button onclick="window.one()">1</button>
+    <button onclick="window.two()">2</button>
+    <button onclick="window.three()">3</button>
+    <button onclick="window.enter()">=</button>
+    <button onclick="window.zero()">0</button>
+    <button onclick="window.comma()">,</button>
+    <button onclick="window.hasi()">Hasi</button>
+    
+    <script>
+        function clear() {
+            document.getElementById('output').innerHTML = '';
+        }
+        function back() {
+            var last = document.getElementById('output').textContent;
+            document.getElementById('output').innerHTML = last.slice(0, -1);
+        }
+        function divide() {
+            document.getElementById('output').innerHTML = '/'
+        }
+        function multiply() {
+            document.getElementById('output').innerHTML = '*'
+        }
+        function seven() {
+            check();
+            var last = document.getElementById('output').textContent;
+            document.getElementById('output').innerHTML = last + '7'
+        }
+        function eight() {
+            check();
+            var last = document.getElementById('output').textContent;
+            document.getElementById('output').innerHTML = last + '8'
+        }
+        function nine() {
+            check();
+            var last = document.getElementById('output').textContent;
+            document.getElementById('output').innerHTML = last + '9'
+        }
+        function subtract() {
+            document.getElementById('output').innerHTML = '-'
+        }
+        function four() {
+            check();
+            var last = document.getElementById('output').textContent;
+            document.getElementById('output').innerHTML = last + '4'
+        }
+        function five() {
+            check();
+            var last = document.getElementById('output').textContent;
+            document.getElementById('output').innerHTML = last + '5'
+        }
+        function six() {
+            check();
+            var last = document.getElementById('output').textContent;
+            document.getElementById('output').innerHTML = last + '6'
+        }
+        function add() {
+            document.getElementById('output').innerHTML = '+'
+        }
+        function one() {
+            check();
+            var last = document.getElementById('output').textContent;
+            document.getElementById('output').innerHTML = last + '1'
+        }
+        function two() {
+            check();
+            var last = document.getElementById('output').textContent;
+            document.getElementById('output').innerHTML = last + '2'
+        }
+        function three() {
+            check();
+            var last = document.getElementById('output').textContent;
+            document.getElementById('output').innerHTML = last + '3'
+        }
+        function enter() {
+            document.getElementById('output').innerHTML = '42'
+        }
+        function zero() {
+            check();
+            var last = document.getElementById('output').textContent;
+            document.getElementById('output').innerHTML = last + '0'
+        }
+        function comma() {
+            check();
+            if(checkComma()) {
+                var last = document.getElementById('output').textContent;
+            document.getElementById('output').innerHTML = last;
+            } else {
+                var last = document.getElementById('output').textContent;
+                document.getElementById('output').innerHTML = last + ','
+            }
+        }
+        function hasi() {
+            check();
+            document.getElementById('output').innerHTML = 'Hasi';
+        }
+
+        function check() {
+            var last = document.getElementById('output').textContent;
+            if(last == '/' || last == '*' || last == '-' || last == '+') {
+                clear();
+            }
+        }
+        function checkComma() {
+            var last = document.getElementById('output').textContent;
+            if(last.includes(',')) {
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
