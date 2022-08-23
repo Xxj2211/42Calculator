@@ -28,7 +28,6 @@
     <button onclick="window.enter()">=</button>
     <button onclick="window.zero()">0</button>
     <button onclick="window.comma()">,</button>
-    <button onclick="window.hasi()">Hasi</button>
     
     <script>
         function clear() {
@@ -112,10 +111,6 @@
                 var last = document.getElementById('output').textContent;
                 document.getElementById('output').innerHTML = last + ','
             }
-        }
-        function hasi() {
-            check();
-            document.getElementById('output').innerHTML = 'Hasi';
         }
 
         function check() {
